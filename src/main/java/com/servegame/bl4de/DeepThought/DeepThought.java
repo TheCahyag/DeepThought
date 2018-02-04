@@ -3,6 +3,10 @@ package com.servegame.bl4de.DeepThought;
 import com.servegame.bl4de.DeepThought.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 
 /**
@@ -25,6 +29,19 @@ public class DeepThought {
     @Mod.Instance(value = DeepThought.MODID)
     public static DeepThought instance;
 
+    @Mod.EventHandler
+    public void onPreInit(FMLPreInitializationEvent event){
+        proxy.init(event);
+    }
 
+    @Mod.EventHandler
+    public void onInit(FMLInitializationEvent event){
+        proxy.init(event);
+    }
+
+    @Mod.EventHandler
+    public void onPostInit(FMLPostInitializationEvent event){
+        proxy.init(event);
+    }
 
 }
