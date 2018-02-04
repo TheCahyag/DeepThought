@@ -1,0 +1,11 @@
+[
+  {
+    "modid": "deepthought",
+    "name": "Deep Thought (Challenge Mode)",
+    "description": "todo: write description",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "authorList": ["TheCahyag"],
+    "dependencies": []
+  }
+]
